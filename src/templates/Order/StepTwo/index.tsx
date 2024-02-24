@@ -6,22 +6,25 @@ import { dishesData } from "../../configs/data";
 import { RequestBodyOrder } from "../type";
 
 const StepTwo = () => {
-  const { control } = useFormContext<RequestBodyOrder>();
-
+  const { control, watch } = useFormContext<RequestBodyOrder>();
+  const mealCategory = watch("mealCategory.value");
   const restaurantList = useMemo(() => {
     const uniqueNameRestaurant: string[] = [];
     return dishesData
       ?.filter((x) => {
         const isDuplicate = uniqueNameRestaurant.includes(x.restaurant);
-        if (!isDuplicate) {
+        if (
+          !isDuplicate &&
+          x?.availableMeals.includes((mealCategory as string).toLowerCase())
+        ) {
           uniqueNameRestaurant.push(x.restaurant);
 
           return true;
         }
-
         return false;
       })
       .map((item) => ({ value: item?.restaurant, label: item?.restaurant }));
+    // eslint-disable-next-line
   }, []);
 
   return (
