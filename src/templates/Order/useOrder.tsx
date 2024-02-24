@@ -42,6 +42,7 @@ export const useOrder = () => {
     } else {
       // submit step review
       successMsg("Submit coming soon...!");
+      console.log("_______ data _______", data);
     }
   });
   return [
