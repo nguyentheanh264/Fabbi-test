@@ -6,6 +6,7 @@ type Props = {
   control: any;
   name: string;
   options: AutocompleteOption[];
+  onChangeValue?: (val: any) => void;
   rules?: any;
   filterOptions?: (
     options: AutocompleteOption[],
@@ -14,7 +15,7 @@ type Props = {
 };
 
 const CoreAutocomplete = (props: Props) => {
-  const { control, options, rules, name, filterOptions } = props;
+  const { control, options, rules, name, filterOptions, onChangeValue } = props;
   return (
     <Controller
       control={control}
@@ -31,6 +32,7 @@ const CoreAutocomplete = (props: Props) => {
             options={options}
             onChange={(_, value) => {
               onChange(value);
+              if (onChangeValue) onChangeValue(value);
             }}
             onBlur={onBlur}
             filterOptions={filterOptions}

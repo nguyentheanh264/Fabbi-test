@@ -31,9 +31,13 @@ const Review = () => {
         <Box sx={{ border: "1px solid #ccc", padding: "10px", width: "250px" }}>
           {dishesConfig?.map((item, index) => (
             <Box key={index} className="flex">
-              <Typography width={"55%"}>{item?.dish?.label}</Typography>
-              <Typography width={"10%"}>-</Typography>
-              <Typography width={"35%"}>{item?.no}</Typography>
+              <Typography width={"45%"}>{item?.dish?.label}</Typography>
+              <Typography width={"10%"} className="text-center">
+                -
+              </Typography>
+              <Typography width={"45%"} className="text-right">
+                {item?.no}
+              </Typography>
             </Box>
           ))}
         </Box>

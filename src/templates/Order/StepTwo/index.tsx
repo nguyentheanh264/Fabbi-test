@@ -6,7 +6,7 @@ import { dishesData } from "../../configs/data";
 import { RequestBodyOrder } from "../type";
 
 const StepTwo = () => {
-  const { control, watch } = useFormContext<RequestBodyOrder>();
+  const { control, watch, setValue } = useFormContext<RequestBodyOrder>();
   const mealCategory = watch("mealCategory.value");
   const restaurantList = useMemo(() => {
     const uniqueNameRestaurant: string[] = [];
@@ -37,6 +37,9 @@ const StepTwo = () => {
           control={control}
           name="restaurant"
           options={restaurantList}
+          onChangeValue={() => {
+            setValue("dishesConfig", [{ dish: null, no: 1 }]);
+          }}
           rules={{ required: "This field is required" }}
         />
       </Box>

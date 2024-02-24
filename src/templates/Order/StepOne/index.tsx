@@ -5,7 +5,8 @@ import { mealOptions } from "../../configs/constants";
 import { RequestBodyOrder } from "../type";
 
 const StepOne = () => {
-  const { control, formState, register } = useFormContext<RequestBodyOrder>();
+  const { control, formState, register, setValue } =
+    useFormContext<RequestBodyOrder>();
   return (
     <Box className="my-5">
       <Box>
@@ -16,6 +17,10 @@ const StepOne = () => {
           control={control}
           name="mealCategory"
           options={mealOptions}
+          onChangeValue={() => {
+            setValue("restaurant", null);
+            setValue("dishesConfig", [{ dish: null, no: 1 }]);
+          }}
           rules={{ required: "This field is required" }}
         />
       </Box>
@@ -25,7 +30,6 @@ const StepOne = () => {
       <TextField
         size="small"
         fullWidth
-        // label="Number of People"
         type="number"
         error={!!formState.errors.noOfPeople}
         helperText={formState.errors.noOfPeople?.message}
