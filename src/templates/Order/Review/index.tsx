@@ -28,12 +28,12 @@ const Review = () => {
     {
       title: "Dishes",
       value: (
-        <Box sx={{ border: "1px solid #ccc", padding: "10px", width: "200px" }}>
+        <Box sx={{ border: "1px solid #ccc", padding: "10px", width: "250px" }}>
           {dishesConfig?.map((item, index) => (
             <Box key={index} className="flex">
-              <Typography width={"80%"}>{item?.dish?.label}</Typography>
-              <Typography mr={1}>-</Typography>
-              <Typography width={"20%"}>{item?.no}</Typography>
+              <Typography width={"55%"}>{item?.dish?.label}</Typography>
+              <Typography width={"10%"}>-</Typography>
+              <Typography width={"35%"}>{item?.no}</Typography>
             </Box>
           ))}
         </Box>

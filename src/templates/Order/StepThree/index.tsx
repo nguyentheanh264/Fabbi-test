@@ -81,7 +81,7 @@ const StepThree = () => {
               />
             </Box>
             <Box sx={{ width: "5%" }}>
-              {fields.length > 0 && (
+              {fields.length > 1 && (
                 <IconButton onClick={() => remove(index)}>
                   <RemoveCircleOutlineIcon color="error" />
                 </IconButton>

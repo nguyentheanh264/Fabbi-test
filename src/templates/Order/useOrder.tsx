@@ -24,15 +24,24 @@ export const useOrder = () => {
       0
     );
     if (activeStep < dataSteps.length) {
-      if (activeStep === 3 && totalNumberOfDishes < data?.noOfPeople) {
-        setError("root", {
-          message: `The total number of dishes should be greater or equal to the number of people (${data?.noOfPeople})`,
-        });
+      if (activeStep === 3) {
+        if (totalNumberOfDishes > 10) {
+          setError("root", {
+            message: `Maximum 10 dishes`,
+          });
+        } else if (totalNumberOfDishes < data?.noOfPeople) {
+          setError("root", {
+            message: `The total number of dishes should be greater or equal to the number of people (${data?.noOfPeople})`,
+          });
+        } else {
+          setActiveStep((step) => step + 1);
+        }
       } else {
         setActiveStep((step) => step + 1);
       }
     } else {
-      successMsg("Success");
+      // submit step review
+      successMsg("Submit coming soon...!");
     }
   });
   return [

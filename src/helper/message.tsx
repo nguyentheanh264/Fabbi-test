@@ -16,7 +16,7 @@ const SuccessMessage = (props: MessageProps) => {
         style={{ height: 30, width: 30 }}
         color="primary"
       />
-      <div className="px-12" style={{ color: "#242424" }}>
+      <div className="px-4" style={{ color: "#242424" }}>
         <Typography variant="subtitle2" className="mb-3">
           {title ?? "Success"}
         </Typography>
@@ -32,7 +32,7 @@ export const successMsg = (msg: string) => {
   if (msg)
     toast(<SuccessMessage message={msg} />, {
       closeButton: () => (
-        <div className="px-12 my-auto border-l">
+        <div className="px-2 my-auto border-l">
           <CloseOutlinedIcon fontSize="small" />
         </div>
       ),
