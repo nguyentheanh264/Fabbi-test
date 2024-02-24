@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Fabbi-test/static/css/main.1f0d3f61.css",
-    "main.js": "/Fabbi-test/static/js/main.869d7c62.js",
+    "main.js": "/Fabbi-test/static/js/main.e24ebde2.js",
     "static/js/453.dd53e008.chunk.js": "/Fabbi-test/static/js/453.dd53e008.chunk.js",
     "index.html": "/Fabbi-test/index.html",
     "main.1f0d3f61.css.map": "/Fabbi-test/static/css/main.1f0d3f61.css.map",
-    "main.869d7c62.js.map": "/Fabbi-test/static/js/main.869d7c62.js.map",
+    "main.e24ebde2.js.map": "/Fabbi-test/static/js/main.e24ebde2.js.map",
     "453.dd53e008.chunk.js.map": "/Fabbi-test/static/js/453.dd53e008.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f0d3f61.css",
-    "static/js/main.869d7c62.js"
+    "static/js/main.e24ebde2.js"
   ]
 }
