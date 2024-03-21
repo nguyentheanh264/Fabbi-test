@@ -1,10 +1,15 @@
+import { AppProvider } from '@shopify/polaris';
+import '@shopify/polaris/build/esm/styles.css';
+import enTranslations from '@shopify/polaris/locales/en.json';
 import "./css/global.css";
-import Order from "./templates/Order";
+import VolumeDiscount from './templates/VolumeDiscount';
 
 function App() {
   return (
-    <div className="App">
-      <Order />
+    <div >
+      <AppProvider i18n={enTranslations}>
+        <VolumeDiscount />
+      </AppProvider>,
     </div>
   );
 }
