@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Fabbi-test/static/css/main.5a7e7bae.css",
-    "main.js": "/Fabbi-test/static/js/main.927b806e.js",
-    "static/js/453.dd53e008.chunk.js": "/Fabbi-test/static/js/453.dd53e008.chunk.js",
-    "index.html": "/Fabbi-test/index.html",
-    "main.5a7e7bae.css.map": "/Fabbi-test/static/css/main.5a7e7bae.css.map",
-    "main.927b806e.js.map": "/Fabbi-test/static/js/main.927b806e.js.map",
-    "453.dd53e008.chunk.js.map": "/Fabbi-test/static/js/453.dd53e008.chunk.js.map"
+    "main.css": "/Orichi-team-test/static/css/main.e1f8c21e.css",
+    "main.js": "/Orichi-team-test/static/js/main.b9b20224.js",
+    "static/js/453.56f46472.chunk.js": "/Orichi-team-test/static/js/453.56f46472.chunk.js",
+    "index.html": "/Orichi-team-test/index.html",
+    "main.e1f8c21e.css.map": "/Orichi-team-test/static/css/main.e1f8c21e.css.map",
+    "main.b9b20224.js.map": "/Orichi-team-test/static/js/main.b9b20224.js.map",
+    "453.56f46472.chunk.js.map": "/Orichi-team-test/static/js/453.56f46472.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a7e7bae.css",
-    "static/js/main.927b806e.js"
+    "static/css/main.e1f8c21e.css",
+    "static/js/main.b9b20224.js"
   ]
 }
